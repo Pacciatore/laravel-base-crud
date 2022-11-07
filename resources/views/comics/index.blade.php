@@ -11,7 +11,9 @@
             <div class="card col-3">
 
                 <div class="img-container text-center">
-                    <img src="{{ asset($comic['thumb']) }}" alt="{{ $comic['title'] }}">
+                    <a href="{{ route('comic.show', $comic->id) }}">
+                        <img src="{{ asset($comic['thumb']) }}" alt="{{ $comic['title'] }}">
+                    </a>
                 </div>
 
                 <div class="comic-info p-2">
