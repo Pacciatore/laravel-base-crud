@@ -18,4 +18,4 @@ Route::get('/', function () {
 });
 
 
-Route::resource('comic', ComicController::class);
+Route::resource('comic', 'ComicController');
