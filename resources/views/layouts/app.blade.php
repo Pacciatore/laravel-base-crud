@@ -17,7 +17,13 @@
 </head>
 
 <body>
-    @yield('content')
+
+    <h1 class="text-center pt-3"> @yield('title') </h1>
+
+    <div class="container py-5">
+        @yield('content')
+    </div>
+
 </body>
 
 </html>
