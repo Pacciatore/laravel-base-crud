@@ -14,7 +14,7 @@
     <div class="card-container d-flex flex-wrap gap-3 justify-content-around">
 
         @foreach ($comics as $comic)
-            <div class="card col-3">
+            <div class="card col-3 d-flex flex-column">
 
                 <div class="img-container text-center">
                     <a href="{{ route('comic.show', $comic->id) }}">
@@ -27,8 +27,15 @@
 
                     <p> {{ $comic['description'] }} </p>
 
-                    <p> {{ $comic['price'] }} </p>
+                    <p> {{ $comic['price'] }} €</p>
                 </div>
+
+                <form action="{{ route('comic.destroy', $comic->id) }}" method="POST" class="text-center">
+                    @csrf
+                    @method('DELETE')
+
+                    <input type="submit" value="Cancella" class="btn btn-primary">
+                </form>
 
             </div>
         @endforeach
