@@ -5,6 +5,12 @@
 @endsection
 
 @section('content')
+    <div class="text-center pb-3">
+        <div class="btn btn-primary">
+            <a class="text-white text-decoration-none" href="{{ route('comic.create') }}">Aggiungi fumetto</a>
+        </div>
+    </div>
+
     <div class="card-container d-flex flex-wrap gap-3 justify-content-around">
 
         @foreach ($comics as $comic)
