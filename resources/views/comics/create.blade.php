@@ -5,20 +5,31 @@
 @endsection
 
 @section('content')
+
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <form action="{{ route('comic.store') }}" method="POST" class="d-flex flex-column gap-2 flex-wrap justify-content-around">
         @csrf
 
         {{-- Titolo fumetto --}}
         <label for="title">Titolo: </label>
-        <input type="text" name="title" id="title">
+        <input type="text" name="title" id="title" value="{{ old('title') }}">
 
         {{-- Descrizione fumetto --}}
         <label for="description">Descrizione: </label>
-        <input type="text" name="description" id="description">
+        <input type="text" name="description" id="description" value="{{ old('description') }}">
 
         {{-- Link thumb --}}
         <label for="thumb">Link immagine: </label>
-        <input type="url" name="thumb" id="thumb">
+        <input type="url" name="thumb" id="thumb" value="{{ old('thumb') }}">
 
         {{-- Prezzo fumetto --}}
         <label for="price">Prezzo: </label>
