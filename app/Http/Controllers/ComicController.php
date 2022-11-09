@@ -88,6 +88,10 @@ class ComicController extends Controller
     public function update(Request $request, Comic $comic)
     {
         //
+        $data = $request->all();
+        $comic->update($data);
+
+        return redirect()->route('comic.show', $comic->id);
     }
 
     public function confirmDelete(Comic $comic)
