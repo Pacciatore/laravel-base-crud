@@ -30,13 +30,14 @@
                     <p> {{ $comic['price'] }} €</p>
                 </div>
 
-                <form action="{{ route('comic.destroy', $comic->id) }}" method="POST" class="text-center">
+                <a href="{{ route('comic.confirm-delete', $comic->id) }}">Elimina</a>
+                {{-- <form action="{{ route('comic.destroy', $comic->id) }}" method="POST" class="text-center">
                     @csrf
                     @method('DELETE')
 
                     <input type="submit" value="Cancella" class="btn btn-primary">
                 </form>
-
+                --}}
             </div>
         @endforeach
 

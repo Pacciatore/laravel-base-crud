@@ -89,6 +89,11 @@ class ComicController extends Controller
         //
     }
 
+    public function confirmDelete(Comic $comic)
+    {
+        return view('comics.confirm-delete', compact('comic'));
+    }
+
     /**
      * Remove the specified resource from storage.
      *
