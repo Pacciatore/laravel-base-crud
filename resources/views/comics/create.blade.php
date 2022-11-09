@@ -22,7 +22,7 @@
 
         {{-- Prezzo fumetto --}}
         <label for="price">Prezzo: </label>
-        <input type="number" name="price" id="price">
+        <input type="number" step=".01" name="price" id="price">
 
         {{-- Serie del fumetto --}}
         <label for="series">Serie: </label>
