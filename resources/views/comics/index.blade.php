@@ -30,6 +30,10 @@
                     <p> {{ $comic['price'] }} €</p>
                 </div>
 
+                <div class="btn btn-secondary">
+                    <a href="{{ route('comic.edit', $comic->id) }}" class="text-white text-decoration-none">Edita</a>
+                </div>
+
                 <a href="{{ route('comic.confirm-delete', $comic->id) }}">Elimina</a>
                 {{-- <form action="{{ route('comic.destroy', $comic->id) }}" method="POST" class="text-center">
                     @csrf
