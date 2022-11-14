@@ -121,7 +121,7 @@
 
         </form>
 
-        <div class="btn btn-primary position-absolute">
+        <div class="btn btn-primary btn-bottom position-absolute">
             <a href=" {{ route('comic.show', $comic->id) }} " class="text-white text-decoration-none">Back to comic</a>
         </div>
 
