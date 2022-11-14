@@ -3,7 +3,7 @@
   position: relative;
 }
 
-.edit-content .alert-message {
+.edit-content .error-message {
   width: 33%;
   position: absolute;
   right: 0;
@@ -11,5 +11,10 @@
 
 .edit-content form {
   height: 100%;
+}
+
+.edit-content form label,
+.edit-content form input {
+  width: 33%;
 }
 
