@@ -13,6 +13,8 @@
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
     </script>
 
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
     <title>@yield('title')</title>
 </head>
 
