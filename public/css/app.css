@@ -9,6 +9,10 @@
   right: 0;
 }
 
+.edit-content .btn {
+  bottom: 1.5rem;
+}
+
 .edit-content form {
   height: 100%;
 }

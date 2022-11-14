@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="edit-content">
+    <div class="edit-content py-4">
 
         {{-- @if ($errors->any())
             <div class="alert alert-danger alert-message">
@@ -18,7 +18,7 @@
         @endif --}}
 
         <form method="POST" action="{{ route('comic.update', $comic->id) }}"
-            class="py-4 d-flex flex-column justify-content-between">
+            class="d-flex flex-column justify-content-between">
             @csrf
             @method('PUT')
 
@@ -73,12 +73,12 @@
             </div>
 
             <div class="col-12 d-flex flex-column align-items-center justify-content-center">
-                <input type="submit" value="Aggiorna">
+                <input class="btn btn-info text-white" type="submit" value="Aggiorna">
             </div>
 
         </form>
 
-        <div class="btn btn-primary">
+        <div class="btn btn-primary position-absolute">
             <a href=" {{ route('comic.show', $comic->id) }} " class="text-white text-decoration-none">Back to comic</a>
         </div>
 
