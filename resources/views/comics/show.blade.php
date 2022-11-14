@@ -17,7 +17,11 @@
         <p> {{ $comic['price'] }} </p>
     </div>
 
+    <div class="btn btn-info">
+        <a href=" {{ route('comic.edit', $comic->id) }}" class="text-white text-decoration-none">Edita</a>
+    </div>
+
     <div class="btn btn-primary">
-        <a class="text-white text-decoration-none" href="{{ route('comic.index') }}">Back</a>
+        <a href="{{ route('comic.index') }}" class="text-white text-decoration-none">Back</a>
     </div>
 @endsection
