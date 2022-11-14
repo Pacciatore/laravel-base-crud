@@ -8,7 +8,7 @@
     <div class="edit-content">
 
         @if ($errors->any())
-            <div class="alert alert-danger">
+            <div class="alert alert-danger alert-message">
                 <ul>
                     @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>

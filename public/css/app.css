@@ -1,4 +1,15 @@
 .edit-content {
-  background-color: red;
+  height: 75vh;
+  position: relative;
+}
+
+.edit-content .alert-message {
+  width: 33%;
+  position: absolute;
+  right: 0;
+}
+
+.edit-content form {
+  height: 100%;
 }
 
