@@ -27,6 +27,13 @@
             <div class="col-12 d-flex flex-column align-items-center justify-content-center">
                 <label for="title">Titolo: </label>
                 <input type="text" name="title" id="title" value="{{ old('title', $comic['title']) }}">
+
+                @error('title')
+                    <div class="alert alert-danger error-message">
+                        {{ $message }}
+                    </div>
+                @enderror
+
             </div>
 
             {{-- Descrizione fumetto --}}
@@ -34,6 +41,7 @@
                 <label for="description">Descrizione: </label>
                 <input type="text" name="description" id="description"
                     value="{{ old('description', $comic['description']) }}">
+
                 @error('description')
                     <div class="alert alert-danger error-message">
                         {{ $message }}
@@ -45,6 +53,13 @@
             <div class="col-12 d-flex flex-column align-items-center justify-content-center">
                 <label for="thumb">Link immagine: </label>
                 <input type="url" name="thumb" id="thumb" value="{{ old('thumb', $comic['thumb']) }}">
+
+                @error('thumb')
+                    <div class="alert alert-danger error-message">
+                        {{ $message }}
+                    </div>
+                @enderror
+
             </div>
 
             {{-- Prezzo fumetto --}}
@@ -52,24 +67,52 @@
                 <label for="price">Prezzo: </label>
                 <input type="number" step=".01" name="price" id="price"
                     value="{{ old('price', $comic['price']) }}">
+
+                @error('price')
+                    <div class="alert alert-danger error-message">
+                        {{ $message }}
+                    </div>
+                @enderror
+
             </div>
 
             {{-- Serie del fumetto --}}
             <div class="col-12 d-flex flex-column align-items-center justify-content-center">
                 <label for="series">Serie: </label>
                 <input type="text" name="series" id="series" value="{{ old('series', $comic['series']) }}">
+
+                @error('series')
+                    <div class="alert alert-danger error-message">
+                        {{ $message }}
+                    </div>
+                @enderror
+
             </div>
 
             {{-- Data di inizio vendita --}}
             <div class="col-12 d-flex flex-column align-items-center justify-content-center">
                 <label for="sale_date">Data di vendita: </label>
                 <input type="date" name="sale_date" id="sale_date" value="{{ old('sale_date', $comic['sale_date']) }}">
+
+                @error('sale_date')
+                    <div class="alert alert-danger error-message">
+                        {{ $message }}
+                    </div>
+                @enderror
+
             </div>
 
             {{-- Tipo fumetto --}}
             <div class="col-12 d-flex flex-column align-items-center justify-content-center">
                 <label for="type">Tipo: </label>
                 <input type="text" name="type" id="type" value="{{ old('type', $comic['type']) }}">
+
+                @error('type')
+                    <div class="alert alert-danger error-message">
+                        {{ $message }}
+                    </div>
+                @enderror
+
             </div>
 
             <div class="col-12 d-flex flex-column align-items-center justify-content-center">
